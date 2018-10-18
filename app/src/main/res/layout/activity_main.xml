@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="Hello World!"
         android:textAlignment="center"
-        android:textSize="50px"
+        android:textSize="50sp"
         android:textColor="#0099FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -37,9 +37,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select word:"
+        android:text="@string/select_word"
         android:textAlignment="center"
-        android:textSize="50px" />
+        android:textSize="50sp" />
 
     <RadioGroup
         android:id="@+id/radioGroupFirstWord"
@@ -51,16 +51,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Hello" />
+            android:text="@string/hello" />
 
         <RadioButton
             android:id="@+id/radioButtonWorld"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="World" />
+            android:text="@string/world" />
 
     </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonOpenSecondPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF"
+        android:background="#5500CC"
+        android:text="Open page with list" />
 
     <Button
         android:id="@+id/button"

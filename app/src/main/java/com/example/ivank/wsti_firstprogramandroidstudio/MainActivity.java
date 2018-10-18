@@ -1,5 +1,6 @@
 package com.example.ivank.wsti_firstprogramandroidstudio;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,34 +18,55 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton radioButtonHello, radioButtonWorld;
     private CheckBox checkBox;
     private Button button;
+    private Button buttonOpenSecondPage;
     private Switch switch1;
     private String firstText = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         radioGroupFirstWord = findViewById(R.id.radioGroupFirstWord);
 
         radioGroupFirstWord.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+
                 if (checkedId == R.id.radioButtonHello) {
+
                     firstText = "Hello";
+
                 } else if (checkedId == R.id.radioButtonWorld) {
+
                     firstText = "World";
+
                 }
+
             }
+
         });
 
         radioButtonHello = findViewById(R.id.radioButtonHello);
         radioButtonWorld = findViewById(R.id.radioButtonWorld);
         checkBox = findViewById(R.id.checkBox);
         button = findViewById(R.id.button);
+        buttonOpenSecondPage = findViewById(R.id.buttonOpenSecondPage);
         switch1 = findViewById(R.id.switch1);
         textView = findViewById(R.id.textView);
 
+        buttonOpenSecondPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(MainActivity.this, ListItemsActivity.class));
+
+            }
+        });
+
         button.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
 
@@ -75,7 +97,10 @@ public class MainActivity extends AppCompatActivity {
                 }
 
             }
+
         });
 
+
     }
+
 }
