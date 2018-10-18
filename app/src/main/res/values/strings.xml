@@ -3,4 +3,7 @@
     <string name="button">Change text</string>
     <string name="checkbox">Add checked status to up text!</string>
     <string name="Switch">Switch</string>
+    <string name="select_word">Select word:</string>
+    <string name="hello">Hello</string>
+    <string name="world">World</string>
 </resources>
