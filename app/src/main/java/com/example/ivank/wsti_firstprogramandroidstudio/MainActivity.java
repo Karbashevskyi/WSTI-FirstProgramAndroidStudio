@@ -103,4 +103,32 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    public void goSecondPage(View view) {
+
+        Intent goSecondPageIntent = new Intent(getApplicationContext(), SecondActivity.class);
+        Bundle packageParams = new Bundle();
+//        if (!textView.getText().toString().isEmpty()) {
+
+            packageParams.putString("result", textView.getText().toString());
+
+//        }
+        goSecondPageIntent.putExtra("paramsFromMainActivity", packageParams);
+//        startActivity(goSecondPageIntent);
+
+        startActivityForResult(goSecondPageIntent, 1111);
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1111 && resultCode == RESULT_OK) {
+
+            Bundle localBundle = data.getBundleExtra("paramsFromSecondActivity");
+            textView.setText(localBundle.getString("result", "-"));
+
+        }
+    }
+
 }

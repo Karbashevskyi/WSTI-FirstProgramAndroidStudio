@@ -44,7 +44,7 @@
     <RadioGroup
         android:id="@+id/radioGroupFirstWord"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <RadioButton
             android:id="@+id/radioButtonHello"
@@ -61,6 +61,14 @@
             android:text="@string/world" />
 
     </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonEditResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="goSecondPage"
+        android:text="Edit result" />
 
     <Button
         android:id="@+id/buttonOpenSecondPage"
