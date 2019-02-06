@@ -6,4 +6,11 @@
     <string name="select_word">Select word:</string>
     <string name="hello">Hello</string>
     <string name="world">World</string>
+    <string name="edit_result">Edit result</string>
+    <string name="open_contact_list">Open contact list</string>
+    <string name="open_page_with_list">Open page with list</string>
+    <string name="result">Result</string>
+    <string name="open_google_maps">Open Google Maps</string>
+    <string name="select_image">Select image</string>
+    <string name="buttonOpenTablePage">Open table page</string>
 </resources>

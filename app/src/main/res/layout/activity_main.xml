@@ -1,89 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFF"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textAlignment="center"
-        android:textSize="50sp"
-        android:textColor="#0099FF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:background="#FFF"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="@string/checkbox" />
-
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Switch" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/select_word"
-        android:textAlignment="center"
-        android:textSize="50sp" />
-
-    <RadioGroup
-        android:id="@+id/radioGroupFirstWord"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RadioButton
-            android:id="@+id/radioButtonHello"
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/hello" />
+            android:text="Hello World!"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textColor="#0099FF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/radioButtonWorld"
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:max="100"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/checkbox" />
+
+        <Switch
+            android:id="@+id/switch1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/world" />
+            android:text="@string/Switch" />
 
-    </RadioGroup>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_word"
+            android:textAlignment="center"
+            android:textSize="25sp" />
 
-    <Button
-        android:id="@+id/buttonEditResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="goSecondPage"
-        android:text="Edit result" />
+        <RadioGroup
+            android:id="@+id/radioGroupFirstWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/buttonOpenSecondPage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#FFF"
-        android:background="#5500CC"
-        android:text="Open page with list" />
+            <RadioButton
+                android:id="@+id/radioButtonHello"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/hello" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#0099FF"
-        android:textColor="#FFF"
-        android:text="@string/button" />
+            <RadioButton
+                android:id="@+id/radioButtonWorld"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/world" />
 
-</LinearLayout>
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/buttonOpenGoogleMaps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF"
+            android:background="#6b8923"
+            android:text="@string/open_google_maps" />
+
+        <Button
+            android:id="@+id/buttonOpenContactList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF"
+            android:background="#025b5b"
+            android:text="@string/open_contact_list" />
+
+        <Button
+            android:id="@+id/buttonEditResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF"
+            android:background="#27025b"
+            android:onClick="goSecondPage"
+            android:text="@string/edit_result" />
+
+        <Button
+            android:id="@+id/buttonOpenSecondPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF"
+            android:background="#5500CC"
+            android:text="@string/open_page_with_list" />
+
+        <Button
+            android:id="@+id/buttonSelectImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff9500"
+            android:textColor="#FFF"
+            android:text="@string/select_image" />
+
+        <Button
+            android:id="@+id/buttonOpenTablePage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ae00ff"
+            android:textColor="#FFF"
+            android:text="@string/buttonOpenTablePage" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0099FF"
+            android:textColor="#FFF"
+            android:text="@string/button" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -3,6 +3,8 @@
     package="com.example.ivank.wsti_firstprogramandroidstudio">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -22,6 +24,7 @@
             android:name=".ListItemsActivity"
             android:label="@string/app_name"></activity>
         <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".TableLayoutActivity"></activity>
     </application>
 
 </manifest>

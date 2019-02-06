@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TableLayout
+        android:id="@+id/table_layout_table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12.5dp">
+
+        <!-- A button span first 3 columns. -->
+        <TableRow
+            android:id="@+id/table_layout_row_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Привіт світ!"
+                tools:layout_editor_absoluteX="67dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+
+        </TableRow>
+
+        <!-- Add three common column in the table row. -->
+        <TableRow
+            android:id="@+id/table_layout_row_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Title:"/>
+
+            <EditText
+                android:id="@+id/editTextTitle"
+                android:hint="Please write only text"/>
+
+            <Button
+                android:id="@+id/buttonAdd"
+                android:text="Add"/>
+
+        </TableRow>
+
+        <!-- Add a blue line. -->
+        <View
+            android:background="@color/colorPrimary"
+            android:layout_height="2.5dp"/>
+
+        <!-- android:layout_column is used specify table row column, column index start from 0.-->
+        <TableRow
+            android:id="@+id/table_layout_row_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="№"/>
+
+            <TextView
+                android:text="Click on text for update"/>
+
+            <Button
+                android:id="@+id/buttonDeleteAllChecked"
+                android:text="Delete Rows"/>
+
+        </TableRow>
+
+
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>
